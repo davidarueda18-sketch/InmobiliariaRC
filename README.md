@@ -71,3 +71,26 @@ export default defineConfig([
   },
 ])
 ```
+
+
+La estructura de carpetas funciona de la siguiente manera
+src/
+├── assets/            # Imágenes, SVGs, fuentes globales.
+├── components/        # UI de propósito general (Buttons, Inputs, Modals).
+├── config/            # Variables de entorno, constantes, config de Firebase/Axios.
+├── features/          # El núcleo: lógica dividida por dominio de negocio.
+│   ├── properties/    # Todo lo relacionado con inmuebles.
+│   │   ├── api/       # Llamadas a la API de esta feature.
+│   │   ├── components/ # Componentes exclusivos de inmuebles (PropertyCard).
+│   │   ├── hooks/     # Hooks específicos (usePropertyList).
+│   │   ├── types/     # Interfaces de TS para inmuebles.
+│   │   └── index.ts   # Punto de entrada público de la feature.
+│   ├── auth/          # Login, Registro, Recuperación.
+│   └── search/        # Filtros complejos y lógica de búsqueda.
+├── hooks/             # Hooks globales reutilizables (useDebounce, useLocalStorage).
+├── layouts/           # Estructuras de página (MainLayout, AuthLayout).
+├── pages/             # Componentes que representan rutas (Home, PropertyDetail).
+├── services/          # Clientes de API globales o servicios compartidos.
+├── store/             # Estado global (Zustand/Redux si es necesario).
+├── types/             # Tipos de TypeScript compartidos a nivel global.
+└── utils/             # Funciones puras de ayuda (formateo de moneda, fechas).
