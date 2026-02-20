@@ -1,2 +1,3 @@
-export { Footer } from "./Footer";
-export { Navbar } from "./Navbar";
+export { Footer } from "./organism/footer";
+export { Navbar } from "./organism/navbar";
+export { Button } from "./atoms/button";

@@ -3,8 +3,10 @@
 
 :root {
   font-family: 'Josefin Sans', sans-serif;
+  color: var(--color-custom-black);
 }
 
 button {
   cursor: pointer;
 }
+
